@@ -35,7 +35,8 @@ ul {
     background-position-x: 20%;
     background-position-y: 15%;
     z-index: -1;
-    overflow: hidden;
+    animation:intro 5s forwards;
+    // overflow: hidden;
 }
 
 .logo  {
@@ -77,8 +78,11 @@ section.hero {
     height: 90vh;
     
 
-    svg {
-        stroke: white;
+    .down-arrow {
+        stroke: black;
+        position: unset;
+        height: 3em;
+        animation: movearrow 1s alternate-reverse infinite;
     }
 }
 
@@ -110,6 +114,7 @@ section.hero {
     }
     
 }
+
 
 
 @media only screen and (min-width:920px){
@@ -160,10 +165,68 @@ section.hero {
     svg {
         stroke: black;
         position: unset;
+        
 
         path{
             fill: black;
         }
     }
   }
+  .featuer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3em;
+    margin-bottom: 8em;
+
+    img {
+        width: 25em;
+
+    }
+    .content {
+        text-align: right;
+        width: 25em;
+    }
+    
+  }
+  .featuer.left {
+    grid-template-areas: 
+        "left right";
+    
+    .content{
+        text-align: left;
+        width: 25em;
+        justify-self: left;
+    }
+    .left-img {
+        grid-area: left;
+    }
+}
+
+}
+
+@media only screen and (min-width:1200px){
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+@keyframes intro {
+    from{
+        clip-path:polygon(45% 0, 45% 0, 48% 100%, 48% 100%) ;
+    }
+    to{
+        clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 100%);
+    }
+}
+
+
+@keyframes movearrow {
+    from{
+        transform:translateY(-20px) ;
+    }
+    to{
+        transform: translateY(0);
+    }
 }
