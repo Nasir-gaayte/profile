@@ -10,6 +10,17 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin-top: 8em;
+
+    a{
+        color: black;
+        padding: .75em 2em;
+        display: block;
+        &:hover{
+            background: gray;
+        }
+    }
 }
 
 
@@ -30,10 +41,26 @@ ul {
 .logo  {
     color: rgb(189, 56, 56);
     font-weight: bold;
+    font-size: 2.3rem;
 }
 
+.logo span{
+    color: rgb(105, 206, 37);
+}
+
+
 nav {
-    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition:transform .5s ease-in-out;
+
 }
 
 header {
@@ -55,3 +82,88 @@ section.hero {
     }
 }
 
+.close{
+    float: right;
+    margin: 2em;
+    width: 2.5em;
+}
+
+.more-info {
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .title {
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+    .desc{
+        line-height: 1.5em;
+
+    }
+}
+
+@media only screen and (min-width:680px){
+    body{
+        margin: 1.5em 5em;
+        font-family: "Poppins", sans-serif;
+    }
+    
+}
+
+
+@media only screen and (min-width:920px){
+  .menu{
+    display: none;
+  }
+  nav{
+    transform: translateX(0);
+    position: unset;
+    display:block;
+    width: auto;
+    height:auto;
+    background: none;
+
+    svg.close {
+        display: none;
+    }
+    ul {
+        display: flex;
+        margin: 0;
+        
+        a{
+            padding: .5em 1.5em;
+            font-size: 0.9rem;
+            color: rgb(255, 231, 13);
+            font-weight: bolder;
+            &:hover{
+                background:none;
+                text-decoration: underline;
+                
+                font-size: 1em;
+            }
+        }
+    }
+
+  }
+
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 42em;
+  }
+  section.hero{
+    height: auto;
+    width: 45%;
+    margin-bottom: 30em;
+    svg {
+        stroke: black;
+        position: unset;
+
+        path{
+            fill: black;
+        }
+    }
+  }
+}
