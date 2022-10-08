@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,700;1,200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nasir Gaayte</title>
 </head>
 <body>
@@ -15,7 +18,7 @@
     <div class="container">
         <header>
             <a class="logo" href="/">NASIR <span>GAAYTE</span></a>
-            <nav>
+            <nav >
                 <svg class="close" style="color: rgb(57, 188, 243);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" fill="#39bcf3"></path> </svg>
                 <ul>
                     <li><a href="">Profile</a></li>
@@ -38,28 +41,65 @@
             <div class="featuer">
                 <div class="content">
                     <p class="title">Django</p>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla consequatur dolore placeat corporis enim illum.</p>
+                    <p class="desc">Befor you ask my what is your skills you should <span class="mark">KNOW</span>!!!What is Django?
+                        Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. Built by experienced developers, Django takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It is free and open source, has a thriving and active community, great documentation, and many options for free and paid-for support .
+                    </p>
                 </div>
                 <img src="/images/django_data1.png" alt="">
             </div>
             <div class="featuer left">
                 <div class="content">
                     <p class="title">HTML & CSS</p>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla consequatur dolore placeat corporis enim illum.</p>
+                    <p class="desc">To represent me thoughts of complete and perfect jops the i do in the backend i owned some skills of html and css. </p><br>
+                    <p>for example this webpage and all css and more of this example found in <a href="">contact of my github ..</a></p>
                 </div>
                 <img class="left-img" src="/images/css_html.jpg" alt="">
             </div>
             <div class="featuer">
                 <div class="content">
                     <p class="title">PYTHON</p>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla consequatur dolore placeat corporis enim illum.</p>
+                    <p class="desc">Python it is one of many langueg that can human can connected with the computers  .</p>
+                    <p>But the ease of handling with python make the game much easier //import -create -use fanctioins than print !!! </p>
+                    <P>Also i am have some specialist in <span class="mark">Tkinter </span></P>
                 </div>
                 <img src="/images/python.png" alt="">
             </div>
         </section>
         <section class="footer">
-            
+            <div class="inn">
+                <div class="social">
+                    <ul>
+                        <li class="social-item"><a href="https://www.facebook.com/nasir.gaayte/"><i class="fa-brands fa-facebook">-Nasir.gaayte</i></a></li>
+                        <li class="social-item"><a href="https://github.com/Nasir-gaayte"><i class="fa-brands fa-github">-somo-nin-jidsii</i></a></li>
+                        <li class="social-item"><a href="https://twitter.com/nasir_gaayte"><i class="fa-brands fa-twitter">@nasir_gaayte</i></a></li>
+                        <li class="social-item"><a href=""><i class="fa-brands fa-whatsapp"></i>Tel:- +252905500009</a></li>
+                    </ul>
+                </div>
+                <div class="back">
+                    <ul>
+                        <li class="back-item"><a href="">Profile</a></li>
+                        <li class="back-item"><a href="">skills</a></li>
+                        <li class="back-item"><a href="">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="end">
+                copyright &copy; Pro: nasir gaayte .own All Rights  
+            </div>
         </section>
     </div>
+    <script>
+         const menu = document.querySelector('.menu')
+         const close = document.querySelector('.close')
+         const nav = document.querySelector('nav')
+
+         menu.addEventListener('click',()=>{
+            nav.classList.add('open-nav');
+         })
+         close.addEventListener('click',()=>{
+            nav.classList.remove('open-nav');
+         })
+
+</script>
 </body>
 </html>

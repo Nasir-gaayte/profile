@@ -69,13 +69,18 @@ header {
     justify-content: space-between;
 
     svg {
+        width: 2em;
         margin-top: 0.6em;
+        cursor: pointer;
     }
 }
 
 section.hero {
-    color: rgb(0, 0, 0);
+    color: rgb(240, 52, 52);
     height: 90vh;
+    animation: movehero 2s ease-in-out forwards;
+    opacity: 0;
+    
     
 
     .down-arrow {
@@ -89,7 +94,7 @@ section.hero {
 .close{
     float: right;
     margin: 2em;
-    width: 2.5em;
+    width: 2em;
 }
 
 .more-info {
@@ -107,11 +112,19 @@ section.hero {
     }
 }
 
+.open-nav {
+    transform: translateX(0%);
+}
+
+.mark{
+    color: red;
+}
+
 @media only screen and (min-width:680px){
     body{
         margin: 1.5em 5em;
         font-family: "Poppins", sans-serif;
-    }
+    }    
     
 }
 
@@ -229,4 +242,69 @@ section.hero {
     to{
         transform: translateY(0);
     }
+}
+
+
+@keyframes movehero {
+    from{
+        transform:translateY(-20px) ;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+// .footer{
+   
+    
+//     background-color:burlywood;
+//     height: 50vh;
+//     width: 100%;
+//     background: cover;
+//     z-index: -1;
+//     color: black;
+//     margin-bottom: 3em;
+  
+// }
+
+.inn{
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+}
+
+
+.social{
+    display: flex;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.social-item {
+    list-style: none;
+    a {
+        padding: 1em 2em;
+        font-size: 0.8rem;
+        color: aqua;
+    }
+}
+
+.back{
+    display: flex;
+    ul{
+        display: flex;
+    .back-item{
+        list-style: none;
+    a {
+        text-decoration: none;
+        padding: 0 0.9em;
+        color: cornflowerblue;
+    }    
+    }
+    }
+   
 }

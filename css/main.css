@@ -65,12 +65,17 @@ header {
   justify-content: space-between;
 }
 header svg {
+  width: 2em;
   margin-top: 0.6em;
+  cursor: pointer;
 }
 
 section.hero {
-  color: rgb(0, 0, 0);
+  color: rgb(240, 52, 52);
   height: 90vh;
+  -webkit-animation: movehero 2s ease-in-out forwards;
+          animation: movehero 2s ease-in-out forwards;
+  opacity: 0;
 }
 section.hero .down-arrow {
   stroke: black;
@@ -82,7 +87,7 @@ section.hero .down-arrow {
 .close {
   float: right;
   margin: 2em;
-  width: 2.5em;
+  width: 2em;
 }
 
 .more-info img {
@@ -96,6 +101,14 @@ section.hero .down-arrow {
 }
 .more-info .desc {
   line-height: 1.5em;
+}
+
+.open-nav {
+  transform: translateX(0%);
+}
+
+.mark {
+  color: red;
 }
 
 @media only screen and (min-width: 680px) {
@@ -218,4 +231,59 @@ section.hero .down-arrow {
   to {
     transform: translateY(0);
   }
+}
+@-webkit-keyframes movehero {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes movehero {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.inn {
+  margin: 0;
+  padding: 0;
+  background-color: #272727;
+}
+
+.social {
+  display: flex;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.social-item {
+  list-style: none;
+}
+.social-item a {
+  padding: 1em 2em;
+  font-size: 0.8rem;
+  color: aqua;
+}
+
+.back {
+  display: flex;
+}
+.back ul {
+  display: flex;
+}
+.back ul .back-item {
+  list-style: none;
+}
+.back ul .back-item a {
+  text-decoration: none;
+  padding: 0 0.9em;
+  color: cornflowerblue;
 }/*# sourceMappingURL=main.css.map */
