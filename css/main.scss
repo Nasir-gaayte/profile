@@ -51,8 +51,6 @@ ul {
 
 .logo span {
     color: rgb(112, 224, 38);
-}
-
 
 nav {
     position: fixed;
@@ -267,13 +265,13 @@ section.hero {
             "left right";
 
         .content {
-            text-align: left;
+            text-align: right;
             width: 25em;
-            justify-self: left;
+            justify-self: right;
         }
 
         .left-img {
-            grid-area: left;
+            grid-area: right;
         }
     }
 
